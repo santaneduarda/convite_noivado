@@ -29,13 +29,14 @@ body {
 
 h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 64px;
+  font-size: 80px;
   color: var(--accent);
   margin-bottom: 10px;
 }
+
 h2 {
   font-family: "Great Vibes", cursive;
-  font-size: 56px;
+  font-size: 80px;
   color: var(--accent);
   margin: 10px 0;
 }
@@ -74,9 +75,10 @@ p {
   right: 0;
   display: flex;
   justify-content: space-between;
+  z-index: -1;
 }
 .flowers img {
-  width: 280px;
+  width: 700px;
   max-width: 40%;
   pointer-events: none;
 }
