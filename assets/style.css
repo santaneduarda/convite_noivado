@@ -1,5 +1,5 @@
 :root {
-  --bg: #fdfbf8;
+  --bg: #f7f2eb; /* marrom claro/bege */
   --accent: #b57b4a;
   --muted: #7b6a5a;
   --text: #3b332e;
@@ -13,11 +13,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: Montserrat, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  overflow-y: hidden; /* esconde barra vertical */
 }
 
 .container {
@@ -29,9 +31,13 @@ body {
 
 h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 80px;
+  font-size: 72px;
   color: var(--accent);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+h1 span {
+  display: inline-block;
+  margin: 0 10px;
 }
 
 h2 {
@@ -55,17 +61,30 @@ p {
 .btn {
   display: inline-block;
   margin: 8px;
-  padding: 12px 20px;
-  border-radius: 25px;
+  padding: 14px 26px;
+  border-radius: 30px;
   background: var(--accent);
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #9e6537;
+}
+
 .btn.ghost {
   background: transparent;
   border: 2px solid var(--accent);
   color: var(--accent);
+}
+
+.btn.ghost:hover {
+  background: var(--accent);
+  color: #fff;
 }
 
 .flowers {
@@ -77,8 +96,9 @@ p {
   justify-content: space-between;
   z-index: -1;
 }
+
 .flowers img {
-  width: 700px;
+  width: 400px;
   max-width: 40%;
   pointer-events: none;
 }
@@ -98,4 +118,30 @@ footer {
   margin-top: 60px;
   font-weight: 600;
   color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  .btn {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    margin-top: 20px;
+  }
+
+  .flowers img {
+    max-width: 48%;
+    pointer-events: none;
+  }
+
+  .margem-paragrafo {
+    margin-top: 40px;
+  }
+
+  .margem-inferior {
+    margin-bottom: 40px;
+  }
 }
