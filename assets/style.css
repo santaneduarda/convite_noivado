@@ -18,8 +18,8 @@ body {
   font-family: Montserrat, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden;
-  overflow-y: hidden; /* esconde barra vertical */
+  overflow-x: auto;
+  overflow-y: auto; /* esconde barra vertical */
 }
 
 .container {
@@ -29,11 +29,43 @@ body {
   min-height: 100vh;
 }
 
+.mea-culpa-regular {
+  font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pompiere-regular {
+  font-family: "Pompiere", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.delius-regular {
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 h1 {
-  font-family: "Great Vibes", cursive;
-  font-size: 72px;
+  font-family: "Mae Culpa", cursive;
+  font-size: 150px;
   color: var(--accent);
   margin-bottom: 20px;
+  margin-top: 130px;
 }
 h1 span {
   display: inline-block;
@@ -41,19 +73,30 @@ h1 span {
 }
 
 h2 {
-  font-family: "Great Vibes", cursive;
-  font-size: 80px;
+  font-family: "Pompiere";
+  font-size: 30px;
   color: var(--accent);
   margin: 10px 0;
+  margin-top: -0.05px;
 }
 h3 {
-  font-size: 20px;
+  font-family: "Delius";
+  font-size: 25px;
   color: var(--muted);
   letter-spacing: 2px;
   margin-top: 20px;
 }
+
+h4 {
+  font-family: "Amatic SC";
+  font-size: 50px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  margin-top: -40px;
+}
+
 p {
-  margin: 12px 0;
+  margin: 15px 0;
   font-family: Lora, serif;
   line-height: 1.6;
 }
@@ -112,6 +155,233 @@ p {
   border-radius: 50%;
   opacity: 0.9;
   pointer-events: none;
+}
+
+.fundo-01 {
+  background: linear-gradient(
+    to bottom,
+    rgba(224, 167, 108, 0) 0%,
+    /* transparente no topo */ rgba(224, 167, 108, 0.9) 150%,
+    /* cor principal aparece */ rgba(224, 167, 108, 0.9) 85%,
+    /* mantém a cor principal */ rgba(224, 167, 108, 0) 100%
+      /* transparente na base */
+  );
+  padding: 250px 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: -200px;
+  text-align: center;
+}
+
+.fundo-02 {
+  background-color: rgba(230, 210, 190, 0.9);
+  padding: 2px 0;
+  margin-top: -227px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.divisao {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.div-01 {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #9e6537;
+  margin-left: calc(-50vw + 50%);
+  margin-top: -40px;
+}
+
+.imagem-div {
+  margin: 0 15px;
+  height: 60px;
+  margin-top: -40px;
+}
+
+.div-02 {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #9e6537;
+  margin-right: calc(-50vw + 50%);
+  margin-top: -40px;
+}
+
+/* LINHA DO TEMPO */
+
+/* Linha do tempo - container principal */
+.timeline {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+/* Linha vertical */
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  background-color: #b99782; /* cor da linha */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+/* Cada item */
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* Bolinhas */
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #f6e9dd; /* cor de fundo da página */
+  border: 3px solid #b99782; /* cor da borda */
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Itens à esquerda */
+.left {
+  left: 0;
+}
+
+/* Itens à direita */
+.right {
+  left: 50%;
+}
+
+/* Ajusta a bolinha do lado direito */
+.right::before {
+  left: -10px;
+}
+
+/* Caixinhas de conteúdo */
+.content {
+  background-color: #fffaf5;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .timeline-item::before {
+    left: 10px;
+  }
+
+  .right {
+    left: 0%;
+  }
+}
+
+/* DICAS */
+
+.dicas-section {
+  text-align: center;
+  padding: 50px 20px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -70px;
+  background-color: rgba(224, 167, 108, 0.9); /* fundo bege claro */
+  color: #6b4f3f; /* marrom do texto */
+}
+
+.dicas-section h2 {
+  font-size: 1em;
+  margin-bottom: 40px;
+  font-family: "Georgia", serif;
+}
+
+/* Container dos cards */
+.dicas-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Cada card */
+.dica-card {
+  background-color: #b99782; /* bege/marrom */
+  color: white;
+  width: 220px;
+  min-height: 200px;
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* Ícone de lâmpada */
+.dica-card::before {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px; /* largura do ícone */
+  height: 100px; /* altura do ícone */
+  background-image: url("/assets/img/lamp-dicas.png"); /* caminho da sua imagem */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .dicas-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dica-card {
+    width: 80%;
+  }
+}
+
+/* TEXTO FINAL */
+.texto-final {
+  display: flex;
+  align-items: center; /* Mantém o texto e a imagem alinhados verticalmente */
+  justify-content: center; /* Centraliza horizontalmente na tela */
+  gap: 8px; /* Espaço entre o texto e a imagem */
+  font-family: "Georgia", serif; /* Você pode trocar pela fonte do site */
+  font-size: 18px;
+  color: #5a3e36; /* Cor do texto (marrom suave, você pode ajustar) */
+}
+
+.coracao {
+  width: 24px; /* Tamanho do coração */
+  height: 24px;
 }
 
 footer {
