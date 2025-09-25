@@ -1,5 +1,6 @@
 :root {
-  --bg: #f7f2eb; /* marrom claro/bege */
+  --bg: #f7f2eb;
+  /* marrom claro/bege */
   --accent: #b57b4a;
   --muted: #7b6a5a;
   --text: #3b332e;
@@ -19,7 +20,8 @@ body {
   background: var(--bg);
   color: var(--text);
   overflow-x: auto;
-  overflow-y: auto; /* esconde barra vertical */
+  overflow-y: auto;
+  /* esconde barra vertical */
 }
 
 .container {
@@ -53,6 +55,10 @@ body {
   font-style: normal;
 }
 
+.amatic-sc-bold-margim-neg {
+  margin-top: 30px;
+}
+
 .delius-regular {
   font-family: "Delius", cursive;
   font-weight: 400;
@@ -67,6 +73,7 @@ h1 {
   margin-bottom: 20px;
   margin-top: 130px;
 }
+
 h1 span {
   display: inline-block;
   margin: 0 10px;
@@ -79,6 +86,7 @@ h2 {
   margin: 10px 0;
   margin-top: -0.05px;
 }
+
 h3 {
   font-family: "Delius";
   font-size: 25px;
@@ -92,7 +100,6 @@ h4 {
   font-size: 50px;
   color: var(--muted);
   letter-spacing: 2px;
-  margin-top: -40px;
 }
 
 p {
@@ -158,15 +165,18 @@ p {
 }
 
 .fundo-01 {
-  background: linear-gradient(
-    to bottom,
-    rgba(224, 167, 108, 0) 0%,
-    /* transparente no topo */ rgba(224, 167, 108, 0.9) 150%,
-    /* cor principal aparece */ rgba(224, 167, 108, 0.9) 85%,
-    /* mantém a cor principal */ rgba(224, 167, 108, 0) 100%
+  background: linear-gradient(to bottom,
+      rgba(224, 167, 108, 0) 0%,
+      /* transparente no topo */
+      rgba(224, 167, 108, 0.9) 150%,
+      /* cor principal aparece */
+      rgba(224, 167, 108, 0.9) 85%,
+      /* mantém a cor principal */
+      rgba(224, 167, 108, 0) 100%
       /* transparente na base */
-  );
-  padding: 250px 0;
+    );
+  padding-top: 250px;
+  padding-bottom: 50px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-top: -200px;
@@ -174,14 +184,37 @@ p {
 }
 
 .fundo-02 {
-  background-color: rgba(230, 210, 190, 0.9);
-  padding: 2px 0;
-  margin-top: -227px;
+  background-color: rgba(138, 74, 10, 0.9);
+  padding: 20px 10px;
+  /* aumenta o padding superior e inferior */
   border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
+.fundo-02 h2 {
+  margin: 0;
+  /* remove a margem padrão que estava puxando mais para cima */
+}
+
+.card-data {
+  padding: 2% 5%;
+}
+
+.delius-regular-size {
+  font-size: 2.5rem;
+}
+
 .divisao {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.divisao-02 {
   display: flex;
   align-items: center;
   text-align: center;
@@ -189,6 +222,14 @@ p {
 }
 
 .div-01 {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #9e6537;
+  margin-left: calc(-50vw + 50%);
+  margin-top: -20px;
+}
+
+.div-03 {
   flex: 1;
   border: none;
   border-top: 2px solid #9e6537;
@@ -203,6 +244,14 @@ p {
 }
 
 .div-02 {
+  flex: 1;
+  border: none;
+  border-top: 2px solid #9e6537;
+  margin-right: calc(-50vw + 50%);
+  margin-top: -20px;
+}
+
+.div-04 {
   flex: 1;
   border: none;
   border-top: 2px solid #9e6537;
@@ -225,7 +274,8 @@ p {
   content: "";
   position: absolute;
   width: 3px;
-  background-color: #b99782; /* cor da linha */
+  background-color: #b99782;
+  /* cor da linha */
   top: 0;
   bottom: 0;
   left: 50%;
@@ -246,8 +296,10 @@ p {
   width: 20px;
   height: 20px;
   right: -10px;
-  background-color: #f6e9dd; /* cor de fundo da página */
-  border: 3px solid #b99782; /* cor da borda */
+  background-color: #f6e9dd;
+  /* cor de fundo da página */
+  border: 3px solid #b99782;
+  /* cor da borda */
   top: 30px;
   border-radius: 50%;
   z-index: 1;
@@ -306,8 +358,10 @@ p {
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: -70px;
-  background-color: rgba(224, 167, 108, 0.9); /* fundo bege claro */
-  color: #6b4f3f; /* marrom do texto */
+  background-color: rgba(224, 167, 108, 0.9);
+  /* fundo bege claro */
+  color: #6b4f3f;
+  /* marrom do texto */
 }
 
 .dicas-section h2 {
@@ -326,7 +380,8 @@ p {
 
 /* Cada card */
 .dica-card {
-  background-color: #b99782; /* bege/marrom */
+  background-color: #b99782;
+  /* bege/marrom */
   color: white;
   width: 220px;
   min-height: 200px;
@@ -348,9 +403,12 @@ p {
   top: -75px;
   left: 50%;
   transform: translateX(-50%);
-  width: 100px; /* largura do ícone */
-  height: 100px; /* altura do ícone */
-  background-image: url("/assets/img/lamp-dicas.png"); /* caminho da sua imagem */
+  width: 100px;
+  /* largura do ícone */
+  height: 100px;
+  /* altura do ícone */
+  background-image: url("/assets/img/lamp-dicas.png");
+  /* caminho da sua imagem */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -371,16 +429,22 @@ p {
 /* TEXTO FINAL */
 .texto-final {
   display: flex;
-  align-items: center; /* Mantém o texto e a imagem alinhados verticalmente */
-  justify-content: center; /* Centraliza horizontalmente na tela */
-  gap: 8px; /* Espaço entre o texto e a imagem */
-  font-family: "Georgia", serif; /* Você pode trocar pela fonte do site */
+  align-items: center;
+  /* Mantém o texto e a imagem alinhados verticalmente */
+  justify-content: center;
+  /* Centraliza horizontalmente na tela */
+  gap: 8px;
+  /* Espaço entre o texto e a imagem */
+  font-family: "Georgia", serif;
+  /* Você pode trocar pela fonte do site */
   font-size: 18px;
-  color: #5a3e36; /* Cor do texto (marrom suave, você pode ajustar) */
+  color: #5a3e36;
+  /* Cor do texto (marrom suave, você pode ajustar) */
 }
 
 .coracao {
-  width: 24px; /* Tamanho do coração */
+  width: 24px;
+  /* Tamanho do coração */
   height: 24px;
 }
 
@@ -414,4 +478,10 @@ footer {
   .margem-inferior {
     margin-bottom: 40px;
   }
+
+  .delius-regular-size {
+    font-size: 1.5rem;
+  }
+
+
 }
