@@ -156,12 +156,31 @@ p {
 .leaf {
   position: absolute;
   top: -10vh;
-  width: 20px;
-  height: 20px;
-  background: var(--leaf1);
-  border-radius: 50%;
-  opacity: 0.9;
   pointer-events: none;
+  z-index: 1;
+  border-radius: 50% 30% 70% 40% / 60% 40% 70% 30%;
+  /* Forma orgânica padrão */
+  transform-origin: center;
+}
+
+.leaf {
+    position: absolute;
+    top: -10vh;
+    pointer-events: none;
+    z-index: 1;
+    border-radius: 80% 30% 70% 40% / 50% 40% 60% 30%; /* Forma de folha */
+    transform-origin: center;
+}
+
+/* Manter as variáveis de cor existentes */
+:root {
+  --bg: #f7f2eb;
+  --accent: #b57b4a;
+  --muted: #7b6a5a;
+  --text: #3b332e;
+  --leaf1: #c88f5a;
+  --leaf2: #a76c3b;
+  --leaf3: #e0b48a;
 }
 
 .fundo-01 {
@@ -176,6 +195,8 @@ p {
       /* transparente na base */
     );
   padding-top: 250px;
+  padding-left: 3%;
+  padding-right: 3%;
   padding-bottom: 50px;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
