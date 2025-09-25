@@ -526,6 +526,10 @@ footer {
     font-size: 48px;
   }
 
+  .mea-culpa-regular {
+    font-size: 4rem;
+  }
+
   .btn {
     display: block;
     width: 70%;
