@@ -86,7 +86,7 @@ body {
 h1 {
   font-family: "Mae Culpa", cursive;
   font-size: 150px;
-  color:#a67850;
+  color: #a67850;
   margin-bottom: 20px;
   margin-top: 125px;
 }
@@ -103,8 +103,8 @@ h2 {
   margin: 10px 0;
   margin-top: -40px;
   margin-bottom: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
   letter-spacing: 2px; /* espaçamento mais sutil */
   text-align: justify;
 }
@@ -132,13 +132,6 @@ h5 {
   color: #5c4033;
   letter-spacing: 2px; /* espaçamento mais sutil */
   text-align: center;
-}
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-  h5 {
-    font-size: 22px;
-  }
 }
 
 p {
@@ -525,32 +518,45 @@ footer {
   h1 {
     font-size: 48px;
   }
+}
 
-  .mea-culpa-regular {
-    font-size: 3.5rem;
+@media (max-width: 768px) {
+  h2 {
+    word-spacing: -10px;
   }
+}
 
-  .btn {
-    display: block;
-    width: 70%;
-    margin: 10px auto;
-    margin-top: 20px;
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  h5 {
+    font-size: 22px;
   }
+}
 
-  .flowers img {
-    max-width: 48%;
-    pointer-events: none;
-  }
+.mea-culpa-regular {
+  font-size: 3.5rem;
+}
 
-  .margem-paragrafo {
-    margin-top: 40px;
-  }
+.btn {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  margin-top: 20px;
+}
 
-  .margem-inferior {
-    margin-bottom: 40px;
-  }
+.flowers img {
+  max-width: 48%;
+  pointer-events: none;
+}
 
-  .delius-regular-size {
-    font-size: 1.5rem;
-  }
+.margem-paragrafo {
+  margin-top: 40px;
+}
+
+.margem-inferior {
+  margin-bottom: 40px;
+}
+
+.delius-regular-size {
+  font-size: 1.5rem;
 }
