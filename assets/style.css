@@ -35,6 +35,7 @@ body {
   font-family: "Mea Culpa", cursive;
   font-weight: 400;
   font-style: normal;
+  font-size: 8rem;
 }
 
 .rouge-script-regular {
@@ -524,17 +525,20 @@ footer {
   h2 {
     word-spacing: -10px;
   }
+
+  .mea-culpa-regular {
+  font-size: 3.5rem;
 }
+
+}
+
+
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
   h5 {
     font-size: 22px;
   }
-}
-
-.mea-culpa-regular {
-  font-size: 3.5rem;
 }
 
 .btn {
